@@ -1,0 +1,30 @@
+CHIP Log2{
+	IN in[16];
+	OUT out[16];
+	
+	PARTS:
+	Not16(in=in, out=nin);
+    Add16(a=in, b=nin, out=dif);
+	Inc16(in=dif, out=abc);
+	Inc16(in=abc, out=abc1);
+	Inc16(in=abc1, out=abc2);
+	Inc16(in=abc2, out=abc3);
+	Inc16(in=abc3, out=abc4);
+	Inc16(in=abc4, out=abc5);
+	Inc16(in=abc5, out=abc6);
+	Inc16(in=abc6, out=abc7);
+	Inc16(in=abc7, out=abc8);
+	Inc16(in=abc8, out=abc9);
+	Inc16(in=abc9, out=abc10);
+	Inc16(in=abc10, out=abc11);
+	Inc16(in=abc11, out=abc12);
+	Inc16(in=abc12, out=abc13);
+	Inc16(in=abc13, out=abc14);
+	Inc16(in=abc14, out=abc15);
+	Inc16(in=abc15, out=abc16);
+	Clz(in=in, out=out1);
+	Not16(in=out1, out=n);
+	Add16(a=abc16, b=n, out=dif1);
+	IsNegative(a=in, out=negin);
+	Mux16(a=dif1, b=dif, sel=negin, out=out);
+}
