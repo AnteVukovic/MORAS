@@ -1,0 +1,227 @@
+@7
+D = A;
+@i
+M = D
+
+(LOOP12_START)
+    @i
+    D = M;
+    @519
+    D = D - A;
+    @LOOP12_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP12_START
+    0; JMP
+(LOOP12_END)
+
+@518
+D = A;
+@i
+M = D;
+
+(LOOP13_START)
+    @i
+    D = M;
+    @1030
+    D = D - A;
+    @LOOP13_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP13_START
+    0; JMP
+(LOOP13_END)
+
+@1029
+D = A;
+@i
+M = D;
+
+(LOOP14_START)
+    @i
+    D = M;
+    @1541
+    D = D - A;
+    @LOOP14_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP14_START
+    0; JMP
+(LOOP14_END)
+
+@1540
+D = A;
+@i
+M = D;
+
+(LOOP15_START)
+    @i
+    D = M;
+    @2052
+    D = D - A;
+    @LOOP15_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP15_START
+    0; JMP
+(LOOP15_END)
+
+@2051
+D = A;
+@i
+M = D;
+
+(LOOP16_START)
+    @i
+    D = M;
+    @2563
+    D = D - A;
+    @LOOP16_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP16_START
+    0; JMP
+(LOOP16_END)
+
+@2562
+D = A;
+@i
+M = D;
+
+(LOOP17_START)
+    @i
+    D = M;
+    @3074
+    D = D - A;
+    @LOOP17_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP17_START
+    0; JMP
+(LOOP17_END)
+
+@3073
+D = A;
+@i
+M = D;
+
+(LOOP18_START)
+    @i
+    D = M;
+    @3585
+    D = D - A;
+    @LOOP18_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP18_START
+    0; JMP
+(LOOP18_END)
+
+@3584
+D = A;
+@i
+M = D;
+
+(LOOP19_START)
+    @i
+    D = M;
+    @4096
+    D = D - A;
+    @LOOP19_END
+    D; JGE
+    
+    @i
+    D = M;
+    @SCREEN
+    A = A + D;
+    M = -1;
+    
+    @32
+    D = A;
+    @i
+    M = M + D;
+    
+    @LOOP19_START
+    0; JMP
+(LOOP19_END)
+
+(END)
+@END
+0; JMP
