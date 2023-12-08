@@ -1,0 +1,1 @@
+R[0] puta zbrjamo prvih R[10] prirodnih brojeva i rezultat spremamo u R[1]

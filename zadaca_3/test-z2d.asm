@@ -1,0 +1,21 @@
+@1
+M=0
+$WHILE(0)
+@10
+D=M
+@8
+M=D
+$WHILE(8)
+@8
+D=M
+@1
+M=M+D
+@8
+M=M-1
+$END
+@0
+M=M-1
+$END
+(END)
+@END
+0; JMP
