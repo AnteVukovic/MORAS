@@ -1,0 +1,26 @@
+function Pell 1
+	push argument 0
+	push constant 1
+	sub
+	pop local 0
+	push local 0
+	if-goto TRUE
+	push local 0
+	push constant 1
+	sub
+	if-goto TRUE
+		push local 0
+		call pell.Pell 1
+		push local 0
+		call pell.Pell 1
+		add
+		push local 0
+		push constant 1
+		sub
+		call pell.Pell 1
+		add
+		goto END
+	label TRUE
+		push local 0
+	label END
+		return

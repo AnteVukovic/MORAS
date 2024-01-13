@@ -1,0 +1,22 @@
+function Max 3
+    push argument 0
+    push argument 1
+	push argument 2
+	pop local 2
+	pop local 1
+	pop local 0
+	push local 0
+	push local 1
+	gt
+	if-goto YES
+	goto NO
+	label YES
+		push local 0
+		push local 0
+		goto END
+	label NO
+		push local 1
+		push local 1
+		goto END
+	label END
+		return

@@ -1,0 +1,9 @@
+sp
+call main2b.Main 0
+ep
+
+function Main 0
+	push constant 6
+	call pell.Pell 1
+	pop static 0
+	return

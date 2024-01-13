@@ -1,0 +1,11 @@
+sp
+call main2a.Main 0
+ep
+
+function Main 0
+	push constant 123
+	push constant 921
+	push constant 611
+	call max.Max 3
+	pop static 3
+	return

@@ -1,0 +1,47 @@
+sp
+call main3.Main 0
+ep
+
+function Main 0
+	push constant 50
+	
+	push local 0
+	pop pointer 1
+	push constant 2
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 3
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 4
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 6
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 7
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 8
+	pop that 0
+	
+	push local 0
+	pop pointer 1
+	push constant 9
+	pop that 0
+	
+	push local 0
+	push constant 7
+	push constant 4
+	call BS.search 3
+	return

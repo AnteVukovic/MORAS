@@ -1,0 +1,14 @@
+sp
+call main2c.Main 0
+ep
+
+function Main 0
+	push constant 34
+	push constant 5
+	call div.Div 2
+	pop static 0
+	push constant 34
+	push constant 5
+	call div.Mod 2
+	pop static 1
+	return

@@ -1,0 +1,30 @@
+function Max 3
+	push argument 0
+	push argument 1
+	gt
+	if-goto AVB
+	lt
+	if-goto BVA
+	goto AVB
+	label AVB
+		pop local 1
+		push argument 2
+		gt
+		if-goto YES
+		lt
+		if-goto NO
+	label BVA
+		pop local 0
+		push argument 2
+		gt
+		if-goto YES
+		lt
+		if-goto NO
+	label YES
+		pop local 1
+		goto END
+	label NO
+		pop local 0
+		goto END
+	label END
+		return

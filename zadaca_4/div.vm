@@ -1,0 +1,46 @@
+function Div 2
+	push constant 0
+	push argument 0
+	pop local 1
+	pop local 0
+	label WHILE
+		push local 1
+		push argument 1
+		lt
+		if-goto END
+		push local 0
+		push constant 1
+		add
+		push local 1
+		push argument 1
+		sub
+		pop local 1
+		pop local 0
+		goto WHILE
+	label END
+		push local 0
+		return
+
+
+function Mod 2
+	push constant 0
+	push argument 0
+	pop local 1
+	pop local 0
+	label WHILE1
+		push local 1
+		push argument 1
+		lt
+		if-goto END1
+		push local 0
+		push constant 1
+		add
+		push local 1
+		push argument 1
+		sub
+		pop local 1
+		pop local 0
+		goto WHILE1
+	label END1
+		push local 1
+		return

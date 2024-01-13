@@ -1,0 +1,84 @@
+function Div 2
+	push constant 0
+	push argument 0
+	pop local 1
+	pop local 0
+	label WHILE
+		push local 1
+		push argument 1
+		lt
+		if-goto END
+		push local 0
+		push constant 1
+		add
+		push local 1
+		push argument 1
+		sub
+		pop local 1
+		pop local 0
+		goto WHILE
+	label END
+		push local 0
+		return
+
+
+function Search 3
+	push argument 0
+	push argument 1
+	push constant 2
+	call BS.Div 2
+	push argument 2
+	pop local 2
+	pop local 1
+	pop local 0
+	label WHILES
+		push local 0
+		push local 1
+		add
+		pop pointer 1
+		push that 0
+		push local 2
+		eq
+		if-goto EQS
+		push that 0
+		push local 2
+		gt
+		if-goto M
+		goto V
+		label M
+			push local 1
+			push local 1
+			push constant 2
+			call BS.Div 2
+			add
+			push local 3
+			push constant 0
+			eq
+			if-goto NILS
+			pop local 2
+			pop local 1
+			push argument 2
+			goto WHILES
+		label V
+			push local 1
+			push local 1
+			push constant 2
+			call BS.Div 2
+			sub
+			push local 3
+			push constant 0
+			eq
+			if-goto NILS
+			pop local 2
+			pop local 1
+			push argument 2
+			goto WHILES
+		label EQS
+			push local 1
+			goto ENDS
+		label NILS
+			push constant 0
+			push constant 1
+			sub
+	label ENDS
+		return
