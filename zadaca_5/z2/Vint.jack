@@ -1,0 +1,125 @@
+class Vint {
+
+	field int capacity;
+	field Array vect;
+	
+	function int pow2(int a) {
+		var int p, i;
+		let p = 1;
+		let i = 0;
+		while (i < a) {
+			let p = p * 2;
+			let i = i + 1;
+		}
+		return p;
+	}
+	
+	constructor Vint new(int n){
+		if (n < 0) {
+			let capacity = 1;
+			let vect = Array.new(1);
+		}
+		else {
+			let capacity = Vint.pow2(n);
+			let vect = Array.new(capacity);
+		}
+		return this;
+	}
+	
+	method int len() {
+		return capacity;
+	}
+	
+	method void set(int k, int v) {
+		if(~(k < capacity) | (k < 0)) {
+			do Output.printString("Index out of range");
+			do Output.println();
+		}
+		else {
+			let vect[k] = v;
+		}
+		return;
+	}
+	
+	method int get(int k) {
+		if(~(k < capacity) | (k < 0)) {
+			do Output.printString("Index out of range");
+			do Output.println();
+			return -1;
+		}
+		else {
+			return vect[k];
+		}
+	}
+	
+	method void resize(int m) {
+		var int mini, i;
+		var Array temp;
+		if (m < 0) {
+			do vect.dispose();
+			let capacity = 1;
+			let vect = Array.new(1);
+		}
+		else {
+			let temp = Array.new(Vint.pow2(m));
+			let mini = Math.min(capacity, Vint.pow2(m));
+			let i = 0;
+			while (i < mini) {
+				let temp[i] = vect[i];
+				let i = i + 1;
+			}
+			do vect.dispose();
+			let capacity = Vint.pow2(m);
+			let vect = temp;
+		}
+		return;
+	}
+	
+	method Array vector() {
+		return vect;
+	}
+	
+	function bool is_eq(Vint a, Vint b) {
+        var int i;
+        if (~(a.len() = b.len())) {
+            return false;
+        }
+        while (i < a.len()) {
+            if (~(a.get(i) = b.get(i))) {
+                return false;
+            }
+            let i = i + 1;
+        }
+        return true;
+    }
+
+    function bool elems(Vint a, Vint b) {
+        var Array arra, arrb;
+        var int i;
+		if (~(a.len() = b.len())){
+			return false;
+		}
+        let arra = a.vector();
+        let arrb = b.vector();
+        do Qsort.qsort(arra, 0, a.len() - 1);
+        do Qsort.qsort(arrb, 0, b.len() - 1);
+        while (i < a.len()) {
+            if (~(arra[i] = arrb[i])) {
+                return false;
+            }
+            let i = i + 1;
+        }
+        return true;
+    }
+
+    method void print() {
+        var int i;
+        while (i < capacity) {
+            do Output.printInt(vect[i]);
+            do Output.printString(" ");
+            let i = i + 1;
+        }
+        do Output.println();
+        return;
+    }
+}

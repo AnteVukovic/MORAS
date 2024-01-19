@@ -1,0 +1,40 @@
+class Graph
+{
+	function int f(int x) {
+		return x / 2 - 5;
+	}
+	
+	function void drawGraph() {
+		var int i, j, k;
+		var Array xc, yc;
+		
+		do Screen.drawLine(0, 128, 255, 128);
+		do Screen.drawLine(128, 0, 128, 255);
+		
+		let xc = Array.new(65);
+		let yc = Array.new(65);
+		
+		while(k < 65){
+			let xc[k] = k - 32;
+			let yc[k] = Graph.f(xc[k]);
+			let k = k + 1;
+		}
+		
+		while(i < 65){
+			if((yc[i] < 33) & (yc[i] > -33)) {
+				if(i = 0) {
+					do Screen.drawPixel(xc[i] + 128, 128 - yc[i]);
+				}
+				else {
+					let j = i - 1;
+					if((yc[j] < 33) & (yc[j] > -33)) {
+						do Screen.drawLine(xc[i] + 128, 128 - yc[i], xc[j] + 128, 128 - yc[j]);
+					}
+				}
+			}
+			let i = i + 1;
+		}
+		
+		return;
+	}
+}

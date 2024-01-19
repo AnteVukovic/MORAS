@@ -1,0 +1,65 @@
+class Main
+{
+	function void main() 
+	{	
+        var Vint A, B;
+		let A = Vint.new(2);
+        let B = Vint.new(3);
+		
+		do Output.printInt(A.len());
+		do Output.println();
+		do Output.printInt(B.len());
+		do Output.println();
+		
+		do A.set(0, 3);
+		do A.set(1, 9);
+		do A.set(2, 8);
+		do A.set(3, 11);
+		do A.set(4, 12);
+		
+		do A.print();
+		
+		do B.set(0, 9);
+		do B.set(1, 11);
+		do B.set(2, 3);
+		do B.set(3, 8);
+		do B.set(4, 12);
+		do B.set(1234, 5);
+		
+		do B.print();
+		
+		if(Vint.is_eq(A, B)) {
+			do Output.printString("A i B su jednaki.");
+			do Output.println();
+		}
+		else {
+			do Output.printString("A i B nisu jednaki.");
+			do Output.println();
+		}
+		
+		do B.resize(2);
+		do Output.printInt(B.len());
+		do Output.println();
+		do B.print();
+		
+		if(Vint.is_eq(A, B)) {
+			do Output.printString("A i B su jednaki.");
+			do Output.println();
+		}
+		else {
+			do Output.printString("A i B nisu jednaki.");
+			do Output.println();
+		}
+		
+		if(Vint.elems(A, B)) {
+			do Output.printString("A i B su jednaki po elementima.");
+			do Output.println();
+		}
+		else {
+			do Output.printString("A i B nisu jednaki po elementima.");
+			do Output.println();
+		}
+		
+		return;
+	}
+}
